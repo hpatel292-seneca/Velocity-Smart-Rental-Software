@@ -15,6 +15,9 @@
     width: 414px;
     height: 896px;
 }
+.main-width{
+    width: 414px;
+}
 .black{
     color: black;
 }
@@ -65,7 +68,7 @@ a{
     justify-content: space-around;
     align-items: center;
     border: 2px solid black;
-    margin: 10px;
+    /* margin: 10px; */
 }
 .frame {
     width: 100%;
@@ -73,31 +76,43 @@ a{
     margin: 0;
     padding: 0;
 }
-
+.width{
+    width: 100%;
+}
+.blue{
+    color: blue;
+}
 </style>
 </head>
 <body>
     <div class="container main-container">
+        <div class="d-flex live_now_div">
+            <i class="fa-brands fa-unity blue mt-1"></i>
+            <strong class="ms-3">3D view of Rental</strong>
+        </div>
         <div class="d-flex my-3 flex-column">
             
-            <iframe  width="365" height="230" allowfullscreen style="border-style:none;" src="https://cdn.pannellum.org/2.5/pannellum.htm#panorama=https%3A//fiverr-res.cloudinary.com/images/q_auto%2Cf_auto/gigs/124770424/original/732ce3c35fa7c549629a2a26f82a1b4fd0c58feb/do-3d-virtual-reality-rendering.jpg&title=%23888%20Victoria%20Park&author=Velocity&autoLoad=true"></iframe>
+            <iframe height="275px"  allowfullscreen style="border-style:none;" src="https://cdn.pannellum.org/2.5/pannellum.htm#panorama=https%3A//fiverr-res.cloudinary.com/images/q_auto%2Cf_auto/gigs/124770424/original/732ce3c35fa7c549629a2a26f82a1b4fd0c58feb/do-3d-virtual-reality-rendering.jpg&title=%23888%20Victoria%20Park&author=Velocity&autoLoad=true"></iframe>
 
 
-            
-            <div class="overflow-auto list-furniture">
-                    <img class="furniture" src="../assets//3d-1.avif">
+            <div class="d-flex live_now_div">
+                <i class="fa-solid fa-vr-cardboard blue"></i>
+                <strong class="ms-3">Plan your furniture</strong>
+            </div>
+            <div class="overflow-auto list-furniture mt-1">
+                    <img class="furniture" src="../assets//3d-1.jpg">
                     <img class="furniture" src="../assets//3d-2.avif">
                     <img class="furniture" src="../assets//3d-3.avif">
                     <img class="furniture" src="../assets//3d-4.avif">
-                    <img class="furniture" src="../assets//3d-1.avif">
+                    <!-- <img class="furniture" src="../assets//3d-1.jpg"> -->
                     <img class="furniture" src="../assets//3d-2.avif">
                     <img class="furniture" src="../assets//3d-3.avif">
                     <img class="furniture" src="../assets//3d-4.avif">
-                    <img class="furniture" src="../assets//3d-1.avif">
+                    <!-- <img class="furniture" src="../assets//3d-1.jpg"> -->
                     <img class="furniture" src="../assets//3d-2.avif">
                     <img class="furniture" src="../assets//3d-3.avif">
                     <img class="furniture" src="../assets//3d-4.avif">
-                    <img class="furniture" src="../assets//3d-1.avif">
+                    <!-- <img class="furniture" src="../assets//3d-1.jpg"> -->
                     <img class="furniture" src="../assets//3d-2.avif">
                     <img class="furniture" src="../assets//3d-3.avif">
                     <img class="furniture" src="../assets//3d-4.avif">
@@ -106,14 +121,17 @@ a{
 
         </div>
 
-        <div class="d-flex justify-content-around nav-bar">
+        <div class="d-flex justify-content-around nav-bar main-width">
             <a href="./feed.html"><img src="../assets/Feed_Strong.png" alt=""></a>
             <a href="./Search.html"><img src="../assets/Search.png" alt=""></a>
             <a href="./Saved.html"><img src="../assets/Saved.png" alt=""></a>
             <a href="./Inbox.html"><img src="../assets/Inbox.png" alt=""></a>
             <a href="./Profile.html"><img src="../assets/Profile.png" alt=""></a>
         </div>
-        
+        <div class="mb-3">
+            <label for="formFile" class="form-label"><strong>Added Furniture</strong></label>
+            <input class="form-control" type="file" id="formFile">
+          </div>
     </div>
     <script src="./stream.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
