@@ -50,40 +50,61 @@
       .liveChat2{
         margin-top: 14px;
       }
+      .nav-bar{
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    width: 414px;
+}
     </style>
   </head>
   <body>
-    <div class="container main-container">
-      <div class="video-container">
-        <video autoplay loop muted>
-          <source src="../assets/RentalVid.mp4" type="video/mp4" />
-          <!-- You can add more <source> tags for different video formats -->
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div>
-        <a href="#"><img src="../assets/RentalName.png" alt=""></a>
-      </div>
-      <hr>
-      <div>
-        <a href="#"><img src="../assets/RentalOwnerName.png" alt=""></a>
-      </div>
-      <hr>
-      <div class="d-flex justify-content-left">
-        <span class="fs-3">Live Chat</span>
-        <i class="fa-solid fa-person ms-4 liveChat2"></i>
-        <Span class="ms-2 liveChat">215</Span>
-      </div>
-      <hr>
-      <div>
-        <a href="#"><img src="../assets/Chat.png" alt=""></a>
-      </div>
-      <hr>
-      <div>
-        <div class="mb-3">
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Comment">
+      <div class="container main-container">
+        <div class="video-container">
+          <video autoplay loop muted>
+            <source src="../assets/RentalVid.mp4" type="video/mp4" />
+            <!-- You can add more <source> tags for different video formats -->
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div>
+          <a href="#"><img src="../assets/RentalName.png" alt=""></a>
+        </div>
+        <hr>
+        <div>
+          <a href="#"><img src="../assets/RentalOwnerName.png" alt=""></a>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-left">
+          <span class="fs-3">Live Chat</span>
+          <i class="fa-solid fa-person ms-4 liveChat2"></i>
+          <Span class="ms-2 liveChat">215</Span>
+        </div>
+        <hr>
+        <div>
+          <a href="#"><img class="chat-image" src="../assets/Chat.png" alt=""></a>
+        </div>
+        <hr>
+        <div>
+          <div class="mb-3">
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Comment">
+            <button class="btn btn-primary submit">submit</button>
+          </div>
         </div>
       </div>
-    </div>
-  </body>
-</html>
+    </body>
+    <script>
+      let chat_image = document.getElementsByClassName('chat-image')[0];
+      let submit_button = document.getElementsByClassName('submit')[0];
+      let chat_input = document.getElementById('formGroupExampleInput');
+  
+  
+      submit_button.addEventListener('click', () => {
+        console.log('clicked');
+        chat_image.src="../assets/Chat-2.png";
+        chat_input.value = '';
+      });
+  
+  
+    </script>
+  </html>
