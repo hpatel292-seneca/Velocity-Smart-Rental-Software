@@ -58,10 +58,14 @@ a{
 
         <div class="d-flex my-3 flex-column">
             <h2 class="fs-6">RentalLease.txt</h2>
-            <button class="btn btn-outline-primary black chat-btn"><img width="14" height="14" class="mx-2 mb-1" src="../assets/sparkle-icon.png" alt="">Summarize</button>
+            <img src="../assets/residential-lease.png" alt="lease agreement" class="border mb-4"></img>
+            <button id="summaryButton" class="btn btn-outline-primary black chat-btn"><img width="14" height="14" class="mx-2 mb-1" src="../assets/sparkle-icon.png" alt="">Summarize</button>
+
+            <div id="summaryContainer"></div>
         </div>
 
-        <div class="d-flex justify-content-around">
+
+        <div class="d-flex justify-content-around sticky-footer">
             <a href="./feed.html"><img src="../assets/Feed_Strong.png" alt=""></a>
             <a href="./Search.html"><img src="../assets/Search.png" alt=""></a>
             <a href="./Saved.html"><img src="../assets/Saved.png" alt=""></a>
@@ -70,5 +74,70 @@ a{
         </div>
 
     </div>
+
+    <script>
+        document.getElementById('summaryButton').addEventListener('click', function() {
+            var content = `
+                <div>
+                    <h1 class="fs-4">Summary of Residential Lease Agreement</h1>
+                    <table>
+                        <tr>
+                        <th>Parties</th>
+                        <td>John Smith (Landlord) and Sarah Johnson (Tenant)</td>
+                        </tr>
+                        <tr>
+                        <th>Lease Term</th>
+                        <td>March 20, 2024 to March 19, 2025, renewable by mutual agreement</td>
+                        </tr>
+                        <tr>
+                        <th>Rent</th>
+                        <td>$1,200/month, due on the 1st, paid via electronic transfer</td>
+                        </tr>
+                        <tr>
+                        <th>Security Deposit</th>
+                        <td>$1,200 held by Landlord for the lease duration</td>
+                        </tr>
+                        <tr>
+                        <th>Utilities</th>
+                        <td>Tenant responsible for electricity, water, gas, cable, and internet</td>
+                        </tr>
+                        <tr>
+                        <th>Maintenance</th>
+                        <td>Landlord maintains property; Tenant reports issues promptly</td>
+                        </tr>
+                        <tr>
+                        <th>Use of Premises</th>
+                        <td>Tenant to use property for private residence only, no illegal activities</td>
+                        </tr>
+                        <tr>
+                        <th>Subleasing</th>
+                        <td>Not allowed without Landlord's written consent</td>
+                        </tr>
+                        <tr>
+                        <th>Entry by Landlord</th>
+                        <td>Landlord may enter for inspection, maintenance, or repair with notice</td>
+                        </tr>
+                        <tr>
+                        <th>Termination</th>
+                        <td>Either party may terminate with 30-day written notice</td>
+                        </tr>
+                        <tr>
+                        <th>Governing Law</th>
+                        <td>California</td>
+                        </tr>
+                        <tr>
+                        <th>Entire Agreement</th>
+                        <td>Supersedes previous agreements</td>
+                        </tr>
+                        <tr>
+                        <th>Severability</th>
+                        <td>Invalid part doesn't affect the rest of the agreement</td>
+                        </tr>
+                    </table>
+                </div> 
+            `;
+            document.getElementById('summaryContainer').innerHTML = content;
+        });
+    </script>
 </body>
 </html>
